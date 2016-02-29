@@ -8,6 +8,14 @@ builder = Gtk.Builder()
 builder.add_from_file("../global/ui.glade")
 
 window = builder.get_object("appWindow")
-window.show_all()
+button = builder.get_object("sendButton")
+in_buffer = builder.get_object("inBuffer")
+out_buffer = builder.get_object("outBuffer")
 
+def on_button_clicked(self):
+    print("Hey!")
+    
+button.connect("clicked", on_button_clicked)
+
+window.show_all()
 Gtk.main()

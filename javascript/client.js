@@ -1,11 +1,11 @@
 #!/usr/bin/env gjs
 
-const server = "http://localhost";
-
 const Gtk = imports.gi.Gtk;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Soup = imports.gi.Soup;
+
+const server = "http://localhost";
 
 Gtk.init(null, 0);
 
