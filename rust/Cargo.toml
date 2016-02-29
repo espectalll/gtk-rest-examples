@@ -1,0 +1,7 @@
+[package]
+name = "gtk-rest-examples"
+version = "0.0.0"
+authors = ["Francisco Gómez <espectalll123@kydara.com>"]
+
+[dependencies]
+gtk = "0.0.6"

@@ -1,0 +1,4 @@
+name: gtk-rest-examples
+version: 0.0.0
+about: REST servers and GUI clients written in different languages as a test
+author: Francisco Gómez <espectalll123@kydara.com>
