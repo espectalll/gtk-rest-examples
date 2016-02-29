@@ -17,7 +17,7 @@ var btn = bld.get_object("sendButton");
 var ibuff = bld.get_object("inputBuffer");
 var obuff = bld.get_object("outputBuffer");
 
-xhrs = Soup.Session.new()
+var xhrs = Soup.Session.new()
 
 btn.connect('clicked', function(){
     var idata = ibuff.get_text(
@@ -26,10 +26,10 @@ btn.connect('clicked', function(){
     
     var msg = Soup.Message.new('POST', server); var err;
     msg.set_request('text/plain', 2, idata, idata.length);
-    var res = xhrs.send(msg, new Gio.Cancellable());
-    res.message.connect('finished', function(message){
-        print( message.get_address() );
-    });
+    xhrs.send_message(msg);
+    var data = msg.response_body.data;
+    
+    obuff.set_text(data, data.length);
 });
 
 win.show();
