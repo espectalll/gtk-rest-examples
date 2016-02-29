@@ -1,14 +1,36 @@
 #!/usr/bin/env gjs
 
+const server = "http://localhost";
+
 const Gtk = imports.gi.Gtk;
+const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
+const Soup = imports.gi.Soup;
 
 Gtk.init(null, 0);
 
 let bld = new Gtk.Builder();
 bld.add_from_file("../global/ui.glade");
 
-win = bld.get_object("appWindow");
-win.show();
+var win = bld.get_object("appWindow");
+var btn = bld.get_object("sendButton");
+var ibuff = bld.get_object("inputBuffer");
+var obuff = bld.get_object("outputBuffer");
 
+xhrs = Soup.Session.new()
+
+btn.connect('clicked', function(){
+    var idata = ibuff.get_text(
+        ibuff.get_start_iter(),
+        ibuff.get_end_iter(), true);
+    
+    var msg = Soup.Message.new('POST', server); var err;
+    msg.set_request('text/plain', 2, idata, idata.length);
+    var res = xhrs.send(msg, new Gio.Cancellable());
+    res.message.connect('finished', function(message){
+        print( message.get_address() );
+    });
+});
+
+win.show();
 Gtk.main();

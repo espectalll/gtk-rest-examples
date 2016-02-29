@@ -3,11 +3,12 @@
   "author": "Francisco Gómez <espectalll123@kydara.com>",
   "description": "REST servers and GUI clients written in different languages as a test",
   "version": "0.0.0",
-  "main": "server.coffee",
+  "main": "server.js",
   "repository": {
     "type": "git"
   },
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4"
   }
 }
