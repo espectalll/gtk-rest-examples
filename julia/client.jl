@@ -15,13 +15,17 @@ obuff = GAccessor.object(bld, "outputBuffer")
 signal_connect(win, :destroy) do widget
     Gtk.gtk_quit()
 end
-signal_connect(btn, :clicked) do widget
+
+function btn_cb(widgetptr::Ptr, data)
     idata = getproperty(ibuff, :text, AbstractString)
     res = post(server,
             headers = Dict("Content-Type" => "text/plain"),
             data = idata)
     setproperty!(obuff, :text, readall(res))
+    nothing
 end
+
+signal_connect(btn_cb, btn, "clicked", Void, (), false)
 
 showall(win)
 Gtk.gtk_main()
