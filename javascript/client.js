@@ -24,7 +24,7 @@ btn.connect('clicked', function(){
         ibuff.get_start_iter(),
         ibuff.get_end_iter(), true);
     
-    var msg = Soup.Message.new('POST', server); var err;
+    var msg = Soup.Message.new('POST', server);
     msg.set_request('text/plain', 2, idata, idata.length);
     xhrs.send_message(msg);
     var data = msg.response_body.data;
