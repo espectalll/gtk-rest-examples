@@ -19,7 +19,7 @@ end
 function btn_cb(widgetptr::Ptr, data)
     idata = getproperty(ibuff, :text, AbstractString)
     res = post(server,
-            headers = Dict("Content-Type" => "text/plain"),
+            headers = Dict("Accept" => "text/plain"),
             data = idata)
     setproperty!(obuff, :text, readall(res))
     nothing
