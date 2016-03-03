@@ -22,7 +22,8 @@ def on_button_clicked(self):
                       headers = {'Content-Type': 'text/plain'},
                       data = in_data)
     out_buffer.set_text(r.text, len(r.text))
-    
+
+window.connect("delete-event", Gtk.main_quit)
 button.connect("clicked", on_button_clicked)
 
 window.show_all()
