@@ -5,3 +5,4 @@ authors = ["Francisco Gómez <espectalll123@kydara.com>"]
 
 [dependencies]
 gtk = "0.0.6"
+hyper = "0.7"
