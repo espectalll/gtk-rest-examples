@@ -15,21 +15,21 @@ First clone the repository.
 
 In order to execute an example, first check if you have their required dependencies:
 
-    - GTK+ 3.16 or newer
-    - node.js
-    - Gjs
-        - LibSoup
-    - Julia 0.4
-        - Gtk.jl
-        - Requests.jl
-        - Merly.jl
-    - Python 3.x (may also work with 2.x)
-        - CherryPy
-        - PyGObject
-        - Requests
-    - Rust 1.5 or newer
-    - Valac 0.30 or newer
-        - LibSoup
+- GTK+ 3.16 or newer
+- node.js
+- Gjs
+  - LibSoup
+- Julia 0.4
+  - Gtk.jl
+  - Requests.jl
+  - Merly.jl
+- Python 3.x (may also work with 2.x)
+  - CherryPy
+  - PyGObject
+  - Requests
+- Rust 1.5 or newer
+- Valac 0.30 or newer
+  - LibSoup
 
 After that, `cd` to the folder with the programming language that you're intending to test. After that, setup and run the code:
 
