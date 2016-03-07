@@ -31,7 +31,7 @@ In order to execute an example, first check if you have their required dependenc
 - Valac 0.30 or newer
   - LibSoup
 
-After that, `cd` to the folder with the programming language that you're intending to test. After that, setup and run the code:
+After that, `cd` to the folder with the programming language that you're intending to test. Then, setup and run the code:
 
 ### Javascript
 
