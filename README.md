@@ -20,9 +20,9 @@ In order to execute an example, first check if you have their required dependenc
 - Gjs
   - LibSoup
 - Julia 0.4
+  - Merly.jl
   - Gtk.jl
   - Requests.jl
-  - Merly.jl
 - Python 3.x (may also work with 2.x)
   - CherryPy
   - PyGObject
@@ -34,11 +34,12 @@ In order to execute an example, first check if you have their required dependenc
 After that, `cd` to the folder with the programming language that you're intending to test. Then, setup and run the code:
 
 ### Javascript
+#### Server
 
     npm install
     sudo npm start
 
-### Client
+#### Client
 
     gjs ./client.js
 
