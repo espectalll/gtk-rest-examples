@@ -1,7 +1,7 @@
 GTK-REST examples
 =================
 
-This repository contains servers & clients to establish a plain text POST communication between them. Its main purpose was to research on various programming languages that may be of interest for both servers and GTK+ applications development.
+This repository contains servers & clients to establish a plain text POST communication between them. Its main purpose was to research on various programming languages that may be of interest for both servers and GTK+ application development.
 
 These packages were made and are intended to run on (GNU)Linux distributions, but some of them seem to work on Windows too.
 
@@ -65,7 +65,7 @@ After that, `cd` to the folder with the programming language that you're intendi
 #### Server
 
     cd server
-    cargo build
+    sudo cargo build
     sudo cargo run
 
 #### Client
@@ -73,5 +73,11 @@ After that, `cd` to the folder with the programming language that you're intendi
     cd client
     cargo build
     cargo run
+
+### Vala
+#### Client
+
+    valac --pkg libsoup-2.4 --pkg gtk+-3.0 client.vala
+    ./client
 
 If you want to run one of the servers without root permissions, just set the port in the source code.

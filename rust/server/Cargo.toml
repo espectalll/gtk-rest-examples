@@ -1,7 +1,7 @@
 [package]
 name = "gtk-rest-examples-server"
 version = "0.0.0"
-authors = ["Francisco Gómez <espectalll123@kydara.com>"]
+authors = ["Francisco Gómez <espectalll@kydara.com>"]
 
 [dependencies]
-hyper = "0.7"
+hyper = "0.9"
